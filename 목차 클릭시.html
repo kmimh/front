@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #wrap{
+        width: 800px;
+        margin: 0px;
+        padding: 0px;
+    }
+    header{
+        height: 200px;
+        background-color: gray;
+    }
+    sidebar{
+        height: 200px;
+        width: 200px;
+        background-color: aquamarine;
+        float: left;
+    }
+    /* --section------------------------------------------------------------------------------- */
+    section{
+        height: 200px;
+        background-color: yellow;
+    }
+    section .main input[type=radio]{
+        display: none;
+    }
+    section .main{
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    section #tab-1:checked ~ .tab label:nth-child(1),
+    section #tab-2:checked ~ .tab label:nth-child(2),
+    section #tab-3:checked ~ .tab label:nth-child(3),
+    section #tab-4:checked ~ .tab label:nth-child(4){
+        background-color: green;
+        box-shadow: none;
+    }
+    section .content > div{
+        display: none;
+    }
+    section #tab-1:checked ~ .content div:nth-child(1),
+    section #tab-2:checked ~ .content div:nth-child(2),
+    section #tab-3:checked ~ .content div:nth-child(3),
+    section #tab-4:checked ~ .content div:nth-child(4){
+        display: block;
+    }
+    section .tab{
+        overflow: hidden;
+    }
+    section .tab label{
+        font-size: 18px;
+        cursor: pointer;
+        float: left;
+        width: 25%;
+        text-align: center;
+        font-family: '돋움';
+        font-weight: bold;
+        letter-spacing: 2px;
+        padding: 15px 0px;
+    }
+    section .content{
+        background-color: green;
+        min-height: 200px;
+        max-height: 200px;
+    }
+    /* --footer---------------------------------------------------------------------------------------------- */
+    footer{
+        height: 200px;
+        background-color: gray;
+    }
+
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>목차 클릭시 div가 바뀌는 코드</h1>
+        <header>해더</header>
+        <sidebar>사이드바</sidebar>       
+        <section>
+        <div class="main">
+                <input type="radio" id="tab-1" name="abc"checked>
+                <input type="radio" id="tab-2" name="abc">
+                <input type="radio" id="tab-3" name="abc">
+                <input type="radio" id="tab-4" name="abc">
+          
+                <div class="tab">
+                    <label for="tab-1">양식</label>
+                    <label for="tab-2">일식</label>
+                    <label for="tab-3">중식</label>
+                    <label for="tab-4">분식</label>
+                </div>
+                <div class="content">
+                    <div class="content-dis">
+                        파스타, 뇨끼, 피자
+                    </div>
+                    <div class="content-dis">
+                        라멘, 스시, 규동, 카츠
+                    </div>
+                    <div class="content-dis">
+                        짜장면, 짬뽕, 라조기, 마라탕
+                    </div>
+                    <div class="content-dis">
+                        떡볶이, 순대, 튀김
+                    </div>
+                </div>
+        </div>
+        </section>
+        <footer>푸터</footer>
+    </div>
+</body>
+</html>
