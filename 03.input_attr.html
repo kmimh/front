@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="watch" method="get">
+        <!-- autofocus - 기본 커서 위치
+             readonly - 읽기 전용(수정 불가능)
+             disabled - 사용불가(서버로 이동 x) 
+             hidden - 브라우저에 나타나지 않음 (서버로 이동 o)-->
+             
+        이름 : <input type="text" name="b"value="홍길동" autofocus><br>
+        별명 : <input type="text" name="c"><br>
+        아이디 : 홍<input type="text" name="a"value="홍" hidden><br>
+        회원레벨 : <input type="text" name="d"value="0" disabled><br>
+        <input type="submit" value="보내기"><br>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- action - submit버튼을 눌렀을 때 들어가는 장소
+         method - "get"-주소창에 나타남
+                  "post" -주소창에서 가려짐(보안 높음)  -->
+    <!-- 
+        1.서버로 입력값을 보내기 위해서는 input태그를 반드시 form태그 안에 넣어야 한다.
+        2.form태그의 action 속성값은 요청 주소다.
+        3.보안을 위해서 post요청을 추천한다.
+        4.name 속성값이 서버로 전달된다.(id속성 x)
+     -->
+    <form action="watch" method="post">
+        <input type="text" id="nid" name="name" placeholder="이름을 입력해!"><br>
+        <input type="password" name="password" placeholder="비밀번호 입력해!"><br>
+        <input type="submit" value="서버로 입력값 보내기">
+        <input type="reset" value="입력값 모두 지우기">
+        <input type="button" value="중복확인">
+    </form>
+</body>
+</html>
